@@ -23,6 +23,6 @@ document.getElementById("input").addEventListener("input", function () {
   if (typedText === quote) {
     const endTime = new Date().getTime();
     const timeTaken = (endTime - startTime) / 1000;
-    document.getElementById("result").textContent = You typed in ${timeTaken.toFixed(2)} seconds!;
+    document.getElementById("result").textContent =' You typed in ${timeTaken.toFixed(2)} seconds! ';
   }
 });
