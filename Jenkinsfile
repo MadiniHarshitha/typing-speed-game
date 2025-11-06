@@ -23,10 +23,8 @@ pipeline {
 
     stage('Run Container') {
       steps {
-        script {
-          sh "docker rm -f ${IMAGE_NAME} || true"
-          sh "docker run -d --name ${IMAGE_NAME} -p ${CONTAINER_PORT}:80 ${IMAGE_NAME}"
-        }
+        bat "docker rm -f ${IMAGE_NAME} || exit 0"
+        bat "docker run -d --name ${IMAGE_NAME} -p ${CONTAINER_PORT}:80 ${IMAGE_NAME}"
       }
     }
   }
