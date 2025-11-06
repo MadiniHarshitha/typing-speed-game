@@ -8,9 +8,11 @@ pipeline {
 
   stages {
     stage('Clone Repository') {
-      steps {
-        git 'https://github.com/MadiniHarshitha/typing-speed-game.git'
-      }
+    steps {
+        git branch: 'main', url: 'https://github.com/MadiniHarshitha/typing-speed-game.git'
+    }
+}
+
     }
 
     stage('Build Docker Image') {
